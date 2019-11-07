@@ -1,0 +1,88 @@
+%font {
+    font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+        "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 14px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    @extend %font;
+
+    * {
+        color: $black;
+    }
+}
+
+textarea,
+input,
+button,
+select,
+option,
+label {
+    @extend %font;
+}
+
+#root {
+    @include size(100vh, 100vw);
+    max-height: 100vh;
+    min-height: 100vh;
+
+    .container-wrapper {
+        @include size(100%, 100%);
+
+        background: #313131;
+        @include flex-row-nowrap(center, flex-start, flex-start);
+
+        .app-window {
+            // margin: 50px 0;
+            @include size($windowHeight, $windowWidth);
+            min-width: $windowMinWidth;
+
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+            background-color: #111111;
+
+            @include flex-col-nowrap(flex-start, center, center);
+
+            .passcodeError {
+                color: white;
+                position: absolute;
+                top: 0px;
+                bottom: 0px;
+
+                @include flex-col-nowrap(center, center, center);
+            }
+        }
+    }
+}
+
+label {
+    margin: 0;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+    height: 6px;
+    margin-left: 4px
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+    opacity: 0;
+    width: 0px;
+    height: 0px
+}
+
+::-webkit-scrollbar-thumb {
+    background: darken($primary-regular, 0);
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+    background: lighten($primary-regular, 10%);
+    opacity: 0.5;
+}

@@ -1,0 +1,65 @@
+@mixin flex-incl($jc, $ai, $ac) {
+    justify-content: $jc;
+    align-items: $ai;
+    align-content: $ac;
+}
+
+@mixin flex-row-nowrap($jc: flex-start, $ai: flex-start, $ac: flex-start) {
+    display: flex;
+    flex-flow: row nowrap;
+    @include flex-incl($jc, $ai, $ac);
+}
+
+@mixin flex-row-wrap($jc: flex-start, $ai: flex-start, $ac: flex-start) {
+    display: flex;
+    flex-flow: row wrap;
+    @include flex-incl($jc, $ai, $ac);
+}
+
+@mixin flex-col-nowrap($jc: flex-start, $ai: flex-start, $ac: flex-start) {
+    display: flex;
+    flex-flow: column nowrap;
+    @include flex-incl($jc, $ai, $ac);
+}
+
+@mixin flex-col-wrap($jc: flex-start, $ai: flex-start, $ac: flex-start) {
+    display: flex;
+    flex-flow: column wrap;
+    @include flex-incl($jc, $ai, $ac);
+}
+
+@mixin size($h, $w: $h) {
+    height: $h;
+    width: $w;
+}
+
+%user-select-none {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+%invisible-scroll-bar {
+    &::-webkit-scrollbar {
+        width: 4px;
+        height: 6px;
+        margin-left: 4px
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+        opacity: 0;
+        width: 0px;
+        height: 0px
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb:window-inactive {
+        background: transparent;
+        opacity: 0.5;
+    }
+}

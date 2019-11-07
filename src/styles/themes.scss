@@ -1,0 +1,59 @@
+@mixin applyTheme($regular) {}
+
+html {
+    .brown {
+        @include applyTheme($brown-regular);
+    }
+
+    .purple {
+        @include applyTheme($purple-regular);
+    }
+
+    .deeppurple {
+        @include applyTheme($deeppurple-regular);
+    }
+
+    .pink {
+        @include applyTheme($pink-regular);
+    }
+
+    .red {
+        @include applyTheme($red-regular);
+    }
+
+    .indigo {
+        @include applyTheme($indigo-regular);
+    }
+
+    .lightblue {
+        @include applyTheme($lightblue-regular);
+    }
+
+    .cyan {
+        @include applyTheme($cyan-regular);
+    }
+
+    .teal {
+        @include applyTheme($teal-regular);
+    }
+
+    .orange {
+        @include applyTheme($orange-regular);
+    }
+
+    .deeporange {
+        @include applyTheme($deeporange-regular);
+    }
+
+    .bluegrey {
+        @include applyTheme($bluegrey-regular);
+    }
+
+    .green {
+        @include applyTheme($green-regular);
+    }
+
+    .lime {
+        @include applyTheme($lime-regular);
+    }
+}

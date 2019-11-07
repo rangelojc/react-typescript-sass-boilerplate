@@ -1,0 +1,25 @@
+@import './utils/utils';
+@import './components/components';
+@import './main';
+
+@import './themes';
+
+.app-container {
+    height: 100vh;
+    width: 100vw;
+
+    @include flex-col-nowrap(center, center, center);
+
+    .app-header {
+        @include flex-col-nowrap(center, center, center);
+
+        .app-logo {
+            height: 100px;
+            width: 100px;
+        }
+
+        .app-link {
+            color: blue;
+        }
+    }
+}
