@@ -30,35 +30,6 @@ label {
     @include size(100vh, 100vw);
     max-height: 100vh;
     min-height: 100vh;
-
-    .container-wrapper {
-        @include size(100%, 100%);
-
-        background: #313131;
-        @include flex-row-nowrap(center, flex-start, flex-start);
-
-        .app-window {
-            // margin: 50px 0;
-            @include size($windowHeight, $windowWidth);
-            min-width: $windowMinWidth;
-
-            border-radius: 5px;
-            overflow: hidden;
-            position: relative;
-            background-color: #111111;
-
-            @include flex-col-nowrap(flex-start, center, center);
-
-            .passcodeError {
-                color: white;
-                position: absolute;
-                top: 0px;
-                bottom: 0px;
-
-                @include flex-col-nowrap(center, center, center);
-            }
-        }
-    }
 }
 
 label {
